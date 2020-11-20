@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Getting Started with [Create React App](https://create-react-app.dev).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. This project was bootstrapped with [github](github.com).
 
-## Available Scripts
+2. Use Redux for state management
 
-In the project directory, you can run:
+3. The task is to have a page with city search input, search button and vertical bar chart with temperature forecast
+ for that city
+ 
+4. Don’t display a chart, if nothing was searched or city is not found
 
-### `npm start`
+5. If city is not found, display a proper message
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+6. City search and chart should be two separate components
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+7. Use [open weather map site](https://openweathermap.org/forecast5) Here is the API key`bad46dfee1ae1125ec4faf31e63449de`. Even though we update this key regularly, it may get expired. In such case you have to get your own by signing up on [OpenWeatherMap](https://home.openweathermap.org/users/sign_in)
 
-### `npm test`
+8. In the case you don’t have a preference in HTTP requests libraries, we recommend [axios](https://github.com/axios/axios)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+9. In the case you don’t have a preference in charting libraries, we recommend [Recharts](https://github.com/recharts/recharts)
 
-### `npm run build`
+10. Keep UI simple to preserve time, you won’t be judged by its looks
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+11. Code must be linted
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+12. Use clear and complete commit messages
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### Some helpful links:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Colored console log](https://stackoverflow.com/questions/9781218/how-to-change-node-jss-console-font-color)

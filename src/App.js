@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import FindCity from "./Components/FindCity";
+import Search from "./Components/Search";
+import axios from "axios";
+import { getFailure, getStarted, getSuccess } from "./Redux/action";
 
 function App() {
+  const data = useSelector(state => state);
+  const dispatch = useDispatch();
+  const [search, setSearch] = useState('Kyiv');
+  
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    dispatch(getWeatherCast(search));
+  };
+  
+  const getWeatherCast = (city) => {
+    dispatch(getStarted());
+    return dispatch => {
+      axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&id=524901&appid=be61c03bfad1e0f8c8b51dcf39815798`)
+        .then(res => {
+          console.log(res.data);
+          dispatch(getSuccess(res.data));
+        })
+        .catch(err => {
+          dispatch(getFailure(err.message));
+        });
+    };
+  };
+ 
+  useEffect(() => {
+    dispatch(getWeatherCast(search));
+  }, [dispatch]);
+  
+  console.log(search);
+  console.log('CAST', data.cast[0]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Search search={search} setSearch={setSearch} handleSubmit={handleSubmit}/>
+      <FindCity data={data}/>
     </div>
   );
 }

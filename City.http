@@ -1,0 +1,2 @@
+GET http://api.openweathermap.org/data/2.5/forecast?q=London&id=524901&appid=be61c03bfad1e0f8c8b51dcf39815798
+Accept: application/json
