@@ -1,4 +1,6 @@
-# Getting Started with [Create React App](https://create-react-app.dev).
+#  Weather Application with chart
+
+0. Getting Started with [Create React App](https://create-react-app.dev).
 
 1. This project was bootstrapped with [github](github.com).
 
