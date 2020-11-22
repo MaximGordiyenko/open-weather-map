@@ -28,16 +28,21 @@ function App() {
         });
     };
   };
- 
+  
   useEffect(() => {
     dispatch(getWeatherCast(search));
   }, [dispatch]);
-
+  
   return (
     <div className="App">
       <Search search={search} setSearch={setSearch} handleSubmit={handleSubmit}/>
-      <FindCity data={data}/>
-      <Chart data={data}/>
+      {data.loading ? (<h2>Loading...</h2>) :
+        data.error ? (<h2>City not found, error: <i>{data.error}</i></h2>) :
+          <>
+            <FindCity data={data}/>
+            <Chart data={data}/>
+          </>
+      }
     </div>
   );
 }
