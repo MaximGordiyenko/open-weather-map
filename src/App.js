@@ -4,6 +4,7 @@ import FindCity from "./Components/FindCity";
 import Search from "./Components/Search";
 import axios from "axios";
 import { getFailure, getStarted, getSuccess } from "./Redux/action";
+import Chart from "./Components/Charts/Chart";
 
 function App() {
   const data = useSelector(state => state);
@@ -20,7 +21,6 @@ function App() {
     return dispatch => {
       axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&id=524901&appid=be61c03bfad1e0f8c8b51dcf39815798`)
         .then(res => {
-          console.log(res.data);
           dispatch(getSuccess(res.data));
         })
         .catch(err => {
@@ -32,13 +32,12 @@ function App() {
   useEffect(() => {
     dispatch(getWeatherCast(search));
   }, [dispatch]);
-  
-  console.log(search);
-  console.log('CAST', data.cast[0]);
+
   return (
     <div className="App">
       <Search search={search} setSearch={setSearch} handleSubmit={handleSubmit}/>
       <FindCity data={data}/>
+      <Chart data={data}/>
     </div>
   );
 }

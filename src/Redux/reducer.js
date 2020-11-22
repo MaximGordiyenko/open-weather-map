@@ -10,7 +10,7 @@ export function todosReducer(state = { loading: false, cast: [], error: null }, 
         ...state,
         loading: false,
         error: null,
-        cast: [...state.cast, action.payload]
+        cast: [action.payload]
       };
     case "GET_FAILURE":
       return {

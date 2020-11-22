@@ -27,4 +27,4 @@
 
 ##### Some helpful links:
 
-[Colored console log](https://stackoverflow.com/questions/9781218/how-to-change-node-jss-console-font-color)
+[BarChart](https://recharts.org/en-US/api/BarChart)
