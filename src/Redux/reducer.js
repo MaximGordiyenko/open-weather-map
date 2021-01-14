@@ -1,4 +1,4 @@
-export function todosReducer(state = { loading: false, cast: [], error: null }, action) {
+export function reducer(state = { loading: false, cast: [], error: null }, action) {
   switch (action.type) {
     case "GET_STARTED":
       return {
